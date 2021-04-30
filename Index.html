@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Typography principals</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=yes"/>
+       
+    </head>
+    <style>
+        canvas{
+          background-image: linear-gradient(to right, #43cea2, #185a9d );
+
+         width:100%;
+         height: 100%;
+        }
+        
+#Stickypaper {
+  position: absolute;
+  z-index: 9;
+  background-image: url("http://kitchenkneads.com/wp-content/uploads/2016/06/dried-light-red-kidney-beans-20-lbs.jpg");
+  text-align: center;
+  border: 1px solid black;
+  
+}
+#Stickypaperheader{
+    padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: brown;
+  color: #fff;
+}
+#Stickypaperheader:hover{
+    background-color: #fff;
+    
+    
+    color: brown;
+}
+a{
+        cursor: url("https://www.newsanyway.com/wp-content/uploads/2017/10/16510729572_5104ee398d_b.jpg"), url("custom.cur"), default;
+    }
+
+
+
+    </style>
+    <body>
+        <p>Place your mouse pointer <a href="https://www.newsanyway.com/wp-content/uploads/2017/10/16510729572_5104ee398d_b.jpg">over me</a> to reveal the custom cursor.</p>
+        <div id="Stickypaper">
+            <div id="Stickypaperheader">  Click here to beans(grammar yes good?)</div>
+            <p>draggable beans</p>
+            <p>yes beans</p>
+            <p><a href="https//:beans.com">beans.com</a></p>
+          </div>
+      <canvas id="Stickypaper-board">
+         
+        </canvas>
+<script src="drag.js">
+
+
+    
+</script>
+
+    </body>
+</html>
+https://www.w3schools.com/howto/howto_js_draggable.asp
