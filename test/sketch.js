@@ -50,11 +50,7 @@ function mousePressed(){
         }
         papers.reverse();
     }
-    if(drag.isDragging==false&&selectedTool=='create note'){
-        let newNote=new paper(mouseX,mouseY,150,150);
-        drag.startDragging(newNote);
-        papers.push(newNote);
-    }
+    
     if(drag.isDragging==false&&selectedTool=='move'){
         papers.reverse();
         let newPapersList=[];
@@ -133,14 +129,7 @@ function doToolbar(){
         document.getElementById("draw-tool").disabled = false;
         styleButtonNonSelected("draw-tool");
     }
-    if(selectedTool=="create note"){
-        document.getElementById("create-tool").disabled = true;
-        styleButtonSelected("create-tool");
-        document.getElementById("thisistext").textContent = "the create tool is selected"
-    }else{
-        document.getElementById("create-tool").disabled = false;
-        styleButtonNonSelected("create-tool");
-    }
+    
    
 
 
@@ -149,6 +138,15 @@ function setTool(toolName){
     selectedTool=toolName;
     doToolbar();
 }
+
+function createPaper(){
+    if(drag.isDragging==false){
+        let newNote=new paper(mouseX,mouseY,150,150);
+        drag.startDragging(newNote);
+        papers.push(newNote);
+    }
+}
+
 function styleButtonNonSelected(buttonId){
     document.getElementById(buttonId).style = "border-width: 1px; border-style: outset; border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133)); border-radius: 4px;";
 }
