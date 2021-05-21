@@ -21,13 +21,21 @@
   </style>
 </head>
 
+
+<!-- this disables the right click menu -->
 <body oncontextmenu="return false;">
 <div>
+
+    <!-- these are the tool selector buttons -->
+
+    <!-- this is the draw tool button -->
     <button onclick="setTool('draw')" id="draw-tool">draw tool</button>
+    <!-- this is the move tool button -->
     <button onclick="setTool('move')" id="move-tool">move tool</button>
-    
+    <!-- this is the create tool button -->
     <button onclick="createPaper()" id="create-tool">create tool</button>
     
+    <!-- this one does nothing but tell you what the tool is -->
     <button id="thisistext">this is where the selected tool name goes</button>
 </div> 
 
